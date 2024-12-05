@@ -4,22 +4,41 @@ public class BoatMovement : MonoBehaviour
 {
 
     public float speed = 2.0f;
-
     public float turnSpeed = 50.0f;
-
-    // Update is called once per frame
+    
+    private bool isTurning = false;
+    private Quaternion targetRotation;
+    
     void Update()
     {
+        
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        
 
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (!isTurning && Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            transform.Rotate(Vector3.up, -turnSpeed * Time.deltaTime);
+            StartTurn(-90); // Turn left
         }
-        else if (Input.GetKey(KeyCode.RightArrow))
+        
+        else if (!isTurning && Input.GetKeyDown(KeyCode.RightArrow))
         {
-            transform.Rotate(Vector3.up, turnSpeed * Time.deltaTime);
+            StartTurn(90); // Turn right
         }
-
+        
+        if (isTurning)
+        {
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
+            if (Quaternion.Angle(transform.rotation, targetRotation) < 0.1f) // Check if the rotation is complete
+            {
+                isTurning = false;
+            }
+        }
     }
+
+    private void StartTurn(float angle)
+    {
+        isTurning = true;
+        targetRotation = Quaternion.Euler(transform.eulerAngles + new Vector3(0, angle, 0));
+    }
+
 }
