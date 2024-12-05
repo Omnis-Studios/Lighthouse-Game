@@ -8,7 +8,13 @@ public class BoatMovement : MonoBehaviour
     
     private bool isTurning = false;
     private Quaternion targetRotation;
-    
+    private GridManager gridManager;
+
+    private void Start()
+    {
+        gridManager = FindObjectOfType<GridManager>();
+    }
+
     void Update()
     {
         
@@ -33,12 +39,23 @@ public class BoatMovement : MonoBehaviour
                 isTurning = false;
             }
         }
+        
+        CheckBounds();
     }
 
     private void StartTurn(float angle)
     {
         isTurning = true;
         targetRotation = Quaternion.Euler(transform.eulerAngles + new Vector3(0, angle, 0));
+    }
+    
+    private void CheckBounds()
+    {
+        Bounds gridBounds = gridManager.GetGridBounds();
+        if (!gridBounds.Contains(transform.position))
+        {
+            Destroy(gameObject); // Despawn the boat if it's outside the grid
+        }
     }
 
 }

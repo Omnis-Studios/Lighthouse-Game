@@ -227,6 +227,54 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 45161102}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &118966008
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 118966010}
+  - component: {fileID: 118966009}
+  m_Layer: 0
+  m_Name: Grid
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &118966009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118966008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5af5ce9eda629194788c60f236167d2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cellSize: 10
+  gridWidth: 20
+  gridHeight: 20
+  gridColor: {r: 0, g: 1, b: 0, a: 1}
+--- !u!4 &118966010
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118966008}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &157207112
 GameObject:
   m_ObjectHideFlags: 0
@@ -542,7 +590,7 @@ Transform:
   m_GameObject: {fileID: 749702895}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -13.8}
+  m_LocalPosition: {x: 82.1, y: 1, z: 68.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -564,7 +612,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camera: {fileID: 1823688464}
   cameraSpeed: 50
-  lookDownSpeed: 5
+  lookDownSpeed: 75
 --- !u!1 &1322823255
 GameObject:
   m_ObjectHideFlags: 0
@@ -610,6 +658,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boatPrefab: {fileID: 689256573072869402, guid: cb0aa1d81ec9eae408ce781ee3384996, type: 3}
+  gridManager: {fileID: 118966009}
   spawnInterval: 2
 --- !u!1 &1823688464
 GameObject:
@@ -901,3 +950,4 @@ SceneRoots:
   - {fileID: 2013410475}
   - {fileID: 1322823256}
   - {fileID: 749702896}
+  - {fileID: 118966010}
