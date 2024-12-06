@@ -1,5 +1,7 @@
+using System;
 using Mono.Cecil.Cil;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,25 +9,22 @@ public class BoatMovement : MonoBehaviour
 {
 
     public float speed = 2.0f;
-    public float turnSpeed = 50.0f;
+    public float turnSpeed = 100.0f;
     
     public TextMeshPro textAboveBoat;
-
-    private string boatCode;
+    public Boat boatComponent;
     
     private bool isTurning = false;
     private Quaternion targetRotation;
     private GridManager gridManager;
     
+    
 
     private void Start()
     {
         gridManager = FindObjectOfType<GridManager>();
-        boatCode = codeGenerator();
-        if (textAboveBoat != null)
-        {
-            textAboveBoat.text = boatCode;
-        }
+        float gridSize = gridManager.cellSize;
+        turnSpeed = (float) ( (180 * speed) / ((gridSize/2) * Math.PI) );
     }
 
     void Update()
@@ -53,6 +52,11 @@ public class BoatMovement : MonoBehaviour
             }
         }
         
+        if (textAboveBoat != null)
+        {
+            textAboveBoat.text = boatComponent.GetBoatCode();
+        }
+        
         CheckBounds();
     }
 
@@ -71,16 +75,6 @@ public class BoatMovement : MonoBehaviour
         }
     }
 
-    private string codeGenerator()
-    {
-        string st = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-        char c = st[Random.Range(0, st.Length)];
-        int num = Random.Range(10, 99);
-
-        string code = c + num.ToString();
-        return code;
-
-    }
 
 }
