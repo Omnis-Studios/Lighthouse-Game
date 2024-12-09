@@ -75,6 +75,16 @@ public class BoatMovement : MonoBehaviour
         }
     }
 
-
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("GridLine"))
+        {
+            LineID lineID = other.GetComponent<LineID>();
+            if (lineID != null)
+            {
+                Debug.Log($"Hit {lineID.lineType} Line at X = {lineID.xIndex}, Z = {lineID.zIndex}");
+            }
+        }
+    }
 
 }
