@@ -1,0 +1,204 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: MAT_Water
+  m_Shader: {fileID: -6465566751694194690, guid: ace84b56d823ed544b85b26625fc72cd, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords:
+  - _DOUBLESIDED_ON
+  - _ENABLE_FOG_ON_TRANSPARENT
+  - _SURFACE_TYPE_TRANSPARENT
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 1
+  m_CustomRenderQueue: 3000
+  stringTagMap:
+    MotionVector: User
+    RenderType: Transparent
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  - TransparentDepthPostpass
+  - TransparentBackface
+  - RayTracingPrepass
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Foam_Texture:
+        m_Texture: {fileID: 2800000, guid: 054dd1c23a7e11e4090e24b6d47a1377, type: 3}
+        m_Scale: {x: 50, y: 50}
+        m_Offset: {x: 0, y: 0}
+    - _Normal_1:
+        m_Texture: {fileID: 2800000, guid: b606f59b1e2946145814ec620535f0b5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normal_2:
+        m_Texture: {fileID: 2800000, guid: ddf198b808fffe344bb9122bdb6396f5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Ripple_Normal_1:
+        m_Texture: {fileID: 2800000, guid: 7eaa0539081f347448e6ae580e9cdaa9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Ripple_Normal_2:
+        m_Texture: {fileID: 2800000, guid: cf98c510542f6ea459cf1be46b46d4c9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Ripple_Normal_3:
+        m_Texture: {fileID: 2800000, guid: cf98c510542f6ea459cf1be46b46d4c9, type: 3}
+        m_Scale: {x: 2, y: 2}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_0479ec73e03c4865a1fddb04c32c45cd_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 7eaa0539081f347448e6ae580e9cdaa9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AddPrecomputedVelocity: 0
+    - _Alpha: 1
+    - _AlphaCutoffEnable: 0
+    - _AlphaDstBlend: 10
+    - _AlphaSrcBlend: 1
+    - _Amplitude: 0.35
+    - _Amplitude_Secondary: 1
+    - _BlendMode: 0
+    - _ConservativeDepthOffsetEnable: 0
+    - _Crest_Falloff: 1.44
+    - _Crest_Offset: 5.77
+    - _Crest_Size: 0.48
+    - _CullMode: 0
+    - _CullModeForward: 0
+    - _DepthOffsetEnable: 0
+    - _Depth_Fade_Distance: 8.9
+    - _Depth_Strength: 0.19
+    - _DoubleSidedEnable: 1
+    - _DoubleSidedGIMode: 0
+    - _DoubleSidedNormalMode: 2
+    - _DstBlend: 10
+    - _DstBlend2: 10
+    - _Edge_Hardness: 1.25
+    - _EnableBlendModePreserveSpecularLighting: 0
+    - _EnableFogOnTransparent: 1
+    - _ExcludeFromTUAndAA: 0
+    - _Extra_Dispersion: 0.08
+    - _Extra_Expersion: 1
+    - _Float: 0
+    - _Float_1: 0
+    - _Float_2: 0
+    - _Float_3: 0
+    - _Foam_Bands: 35.77
+    - _Foam_Falloff: 1
+    - _Foam_Removal: 1
+    - _Foam_Width: 0.6
+    - _Frequency: 0.51
+    - _Frequency_Secondary: 0.25
+    - _MaterialID: 1
+    - _MaterialTypeMask: 2
+    - _OpaqueCullMode: 2
+    - _PerPixelSorting: 0
+    - _RayTracing: 0
+    - _ReceivesSSR: 1
+    - _ReceivesSSRTransparent: 1
+    - _RefractionModel: 0
+    - _Refraction_Strength: 0.005
+    - _RenderQueueType: 4
+    - _RequireSplitLighting: 0
+    - _Ripple_Normal_3_Strength: 0
+    - _Ripple_Speed: 0.01
+    - _Ripple_Strength: 0.4
+    - _Ripple_Tiling: 0.06
+    - _Smoothness: 0.96
+    - _Speed: 0.36
+    - _Speed_Secondary: 0.68
+    - _SrcBlend: 1
+    - _Steepness: 2.45
+    - _Steepness_Secondary: 1
+    - _StencilRef: 0
+    - _StencilRefDepth: 8
+    - _StencilRefDistortionVec: 4
+    - _StencilRefGBuffer: 10
+    - _StencilRefMV: 40
+    - _StencilWriteMask: 6
+    - _StencilWriteMaskDepth: 9
+    - _StencilWriteMaskDistortionVec: 4
+    - _StencilWriteMaskGBuffer: 15
+    - _StencilWriteMaskMV: 41
+    - _Strength: 4.63
+    - _SupportDecals: 1
+    - _SurfaceType: 1
+    - _TessellationBackFaceCullEpsilon: -0.25
+    - _TessellationFactorMaxDistance: 50
+    - _TessellationFactorMinDistance: 20
+    - _TessellationFactorTriangleSize: 100
+    - _TessellationMaxDisplacement: 0.01
+    - _TessellationMode: 0
+    - _TessellationShapeFactor: 0.75
+    - _TransmissionEnable: 1
+    - _TransparentBackfaceEnable: 0
+    - _TransparentCullMode: 2
+    - _TransparentDepthPostpassEnable: 0
+    - _TransparentDepthPrepassEnable: 0
+    - _TransparentSortPriority: 0
+    - _TransparentWritingMotionVec: 0
+    - _TransparentZWrite: 1
+    - _UseShadowThreshold: 0
+    - _Water_Blurriness: 4.73
+    - _Water_Edge_Opacity: 0.823
+    - _Water_Opacity: 0.735
+    - _Wave_Length: 10
+    - _Wave_Speed: 1
+    - _Wave_Steepness: 1
+    - _ZTestDepthEqualForOpaque: 4
+    - _ZTestGBuffer: 4
+    - _ZTestTransparent: 4
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 0, g: 0, b: 0, a: 0}
+    - _Color_1: {r: 0.16100036, g: 0.49199536, b: 0.509434, a: 0}
+    - _Color_2: {r: 0.09019607, g: 0.3735783, b: 0.3764706, a: 0}
+    - _Deep_Colour: {r: 0.119927004, g: 0.19830406, b: 0.7264151, a: 0}
+    - _Direction: {r: 5.13, g: 14.49, b: 0, a: 0}
+    - _Direction_Secondary: {r: -0.5, g: 1.59, b: 0, a: 0}
+    - _DoubleSidedConstants: {r: 1, g: 1, b: 1, a: 0}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Foam_Color: {r: 1, g: 1, b: 1, a: 0}
+    - _Shallow_Colour: {r: 0, g: 0.7857144, b: 1, a: 0}
+    - _Wave_Direction: {r: 0, g: 0.5, b: 1, a: 0.2}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
+--- !u!114 &4629490592623165969
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da692e001514ec24dbc4cca1949ff7e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 13
+  hdPluginSubTargetMaterialVersions:
+    m_Keys: []
+    m_Values: 
